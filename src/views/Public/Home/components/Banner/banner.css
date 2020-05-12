@@ -2,7 +2,7 @@
   width: 100vw;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   height: 100vh;
-  background-image: url('../../../../assets/img/Themis-2000x1334.jpg');
+  background-image: url('../../../../../assets/img/Themis-2000x1334.jpg');
   background-size: cover; 
   background-repeat: no-repeat;
   transform: scaleX(-1)
