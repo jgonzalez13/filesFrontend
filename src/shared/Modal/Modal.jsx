@@ -4,7 +4,7 @@ const Modal = () => {
   return (
     <div>
       <h1>Modal </h1>
-      <p>Soy un pararafo</p>
+      <p>Soy un p</p>
     </div>
   );
 };
