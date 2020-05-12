@@ -37,4 +37,14 @@ git pull origin master
 
 solucionar conflictos si hubiera
 
+# Estilos 
 
+https://bulma.io/
+
+# Formularios
+
+https://jaredpalmer.com/formik/
+
+# Trello
+
+https://trello.com/invite/b/amYBvWv3/b29e7de7501a2948e0a45168c8fbcedb/proyecto-4-semestre

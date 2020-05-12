@@ -6,7 +6,8 @@ const Home = () => {
     <>
       <Banner />
       <div>
-        <h1>HomeView</h1>
+        <h1 className="title">HomeView</h1>
+        <button class="button is-primary">Button</button>
       </div>
     </>
   );
