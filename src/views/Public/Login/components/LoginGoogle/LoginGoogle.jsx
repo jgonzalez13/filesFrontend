@@ -6,36 +6,27 @@ import firebaseConfig from '../../../../../firebase'
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
-class Login extends Component {
-    render(){
-        const {
-            user,
-            signOut,
-            signInWithGoogle,
-        } = this.props;
-        return (
-            <div>
-                {
-                 user 
-                    ? <div> <p>Hello, {user.displayName}</p> <p>{user.email}</p> <img src={user.photoURL} alt="FotoUsuario"/></div>
-                    : <p>Please, sign in.</p>
-                }
-                {
-                 user 
-                    ? <button onClick={signOut}>Sign out</button> 
-                    : <button onClick={signInWithGoogle}>Sign in with Google</button>
-                }
-            </div>
-        );
-    }
-}  
+const Login =({user,signInWithGoogle,signOut})=> (
+  <div> { user ? ( 
+    <>
+      <div> <p>Hello, {user.displayName}</p> <p>{user.email}</p> <img src={user.photoURL} alt="FotoUsuario"/></div>
+      <button onClick={signOut}>Sign out</button> 
+    </>
+  ): (
+    <> 
+      <p>Please, sign in.</p>
+      <button onClick={signInWithGoogle}>Sign in with Google</button>
+    </>
+  )
+  } </div>
+)
 
 const firebaseAppAuth = firebaseApp.auth();
 const providers = {
-    googleProvider : new firebase.auth.GoogleAuthProvider(),
+  googleProvider : new firebase.auth.GoogleAuthProvider(),
 };
 
 export default withFirebaseAuth({
-    providers,
-    firebaseAppAuth,
+  providers,
+  firebaseAppAuth,
 })(Login);
