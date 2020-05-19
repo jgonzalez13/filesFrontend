@@ -1,7 +1,7 @@
 import React from 'react';
 import TableFiles from './TableFiles/TableFiles';
 import { data } from './data';
-import SearchComponent from './search_component'
+import SearchComponent from './Search.Component'
 
 const Files = () => {
   return (
