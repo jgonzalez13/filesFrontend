@@ -2,14 +2,18 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import PublicRoutes from './public/PublicRoutes';
 import PrivateRoutes from './private/PrivateRoutes';
+import Navbar from '../shared/Navbar/Navbar';
 
 function AppRouter() {
-  const auth = false;
+  const auth = true;
   return (
-    <Router>
-      <PublicRoutes auth={auth} />
-      <PrivateRoutes auth={auth} />
-    </Router>
+    <>      
+      <Router>
+        <Navbar auth={auth}/>
+        <PublicRoutes auth={auth} />
+        <PrivateRoutes auth={auth} />
+      </Router>
+    </>
   );
 }
 
