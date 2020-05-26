@@ -1,0 +1,61 @@
+primer srpint
+
+Para el diseño usaremos vulma
+en style usaremos ccs 
+
+views 
+quie empezaremos a trabajr se dividien dos carptas 
+public es la logica de todas nusestras vista púnlica ser divide en tres:
+
+- home: Esta nuestro archivo principal que va 		al home y tiene la carpeta components 		que contendra todos los componentes 		para cada componente debemos crear una 		carpeta extra con  su css si lo 		requiere junto con el archivo del 		componente ejemplo banner.
+
+- login:
+
+- Registro:
+
+private es la logica de todas nusestras vista privada ser divide en tres:
+
+Te vas al archivo routes y en la linea siete cambias a true para entrar a la parte privada
+
+trello
+Tareas
+
+table component: es hacer un componente que se llame tabla y esa tabla hara uso del diseño de bulma y a partir de un array de objetos creara la tabla y crear un archivo fake de datos.
+
+Craer archivo table.js 
+
+importaremos componente table y ese componente recibira data y columns para crear la tabla al ingresar los valores.
+
+modal component: se tiene quie crear un boto que al momento de darle click aparezca una modal diciendote hola
+
+Para hacer la model ir a bulma y buscar en la dicumentacion components -> modal y para hacer la modal usaremos esas libreriar para que nos diga hola.
+
+la carpeta modal estara en src iria un modal.jsrc
+
+nav bar component: crear la parte superior de la barra menu
+
+diseño el banner sera mi lugar de trabajo 
+
+
+github
+se subiran cambios de una vez 
+
+GIT PULL ORIGIN MASTER PARA ACTUALIZAR RAMA PRINCIPAL( cada semana se hace eso)
+
+para trabajar nos cambiaremos de rama con
+git checkout -b test
+
+para ver donde estamos usamos 
+git branch
+
+para salir 
+shift: 
+
+git status para ver que hemos hecho
+
+lo añadimos con git add .
+git commit -m "tests pull request
+
+vamos a git y le damos en compare y le daremos un titulo y ahi nos dira que parte de los archivos cambiamos y podemos agregar un comentario en labels agregaremos code review y crearemos el pull request
+
+git push origin test
