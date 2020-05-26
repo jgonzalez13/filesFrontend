@@ -18,17 +18,7 @@
   margin: 10px auto;
   border-top: 3px solid var(--ColorButton);
 }
-body{
-  margin: 0;
-  padding: 0;
-  background-image: url(./IMG/IMG1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
-  background-attachment: fixed;
-  font-family: sans-serif;
-  height: 100vh;
-}
+
 .login-box{
   width: 390px;
   height: 450px;
