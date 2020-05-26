@@ -12,15 +12,11 @@ const Login = ({ user, signInWithGoogle, signOut }) => (
   <div>
     {user ? (
       <>
-        <div>
-          <p>Hello, {user.displayName}</p> <p>{user.email}</p> <img src={user.photoURL} alt="FotoUsuario" />
-        </div>
-        <button onClick={signOut}>Sign out</button>
+        <button className="buttonG" onClick={signOut}>Sign out</button>
       </>
     ) : (
       <>
-        <p>Please, sign in.</p>
-        <button onClick={signInWithGoogle}>Sign in with Google</button>
+        <button  className="buttonG" onClick={signInWithGoogle}>Sign in with Google</button>
       </>
     )}
   </div>
