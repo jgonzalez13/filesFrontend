@@ -1,14 +1,15 @@
 import React from 'react';
 
-const TableFilesHeader = ({ data }) => {
-  let headers = Object.keys(data[0]);
+const TableFilesHeader = () => {
   return (
         <thead>
           <tr>
-            {headers.map((cabezon, i) => {
-              console.log(cabezon);
-              return <th key={i}>{cabezon}</th>;
-            })}
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Direccion</th>
+            <th>Telefono</th>
+            <th>Correo</th>
+            <th>Expediente</th>
           </tr>
         </thead>
   ); 

@@ -8,7 +8,6 @@ const Files = () => {
     <div className="table-container">
       <h1>FilesView</h1>
       <SearchComponent  />
-      <TableFiles data={data} className = "table"/>
     </div>
   );
 };

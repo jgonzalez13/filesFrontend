@@ -1,65 +1,74 @@
 export const data = [
   {
-    nombre: 'Guasón',
+    id: 0,
+    name: 'Guasón',
     direccion: 'Gotham City 1239',
     telefono: '312-999-999',
     correo: 'eljajas@gmail.com',
     expediente:'12'
   },
   {
-    nombre: 'Pingüino',
+    id: 1,
+    name: 'Pingüino',
     direccion: 'Gotham City 1223',
     telefono: '312-999-999',
     correo: 'clubpinguino@gmail.com',
-    expediente:''
+    expediente:'3'
   },
   {
-    nombre: 'Acertijo',
+    id: 2,
+    name: 'Acertijo',
     direccion: 'Gotham City 7373',
     telefono: '312-999-999',
     correo: 'nose@gmail.com',
-    expediente:''
+    expediente:'34'
   },
   {
-    nombre: 'Bane',
+    id: 3,
+    name: 'Bane',
     direccion: 'Gotham City 1239',
     telefono: '312-999-999',
     correo: 'baneinthemage@gmail.com',
-    expediente:''
+    expediente:'22'
   },
   {
-    nombre: "Ra's al Ghul",
+    id: 4,
+    name: "Ra's al Ghul",
     direccion: 'Japan 1239',
     telefono: '312-999-999',
     correo: 'freezy@gmail.com',
-    expediente:''
+    expediente:'65'
   },
   {
-    nombre: "Two-Face",
+    id: 5,
+    name: "Two-Face",
     direccion: 'Gotham City 1239',
     telefono: '312-999-999',
     correo: 'freezy@gmail.com',
-    expediente:''
+    expediente:'43'
   },
   {
-    nombre: 'Mr Freeze',
+    id: 6,
+    name: 'Mr Freeze',
     direccion: 'Gotham City 1239',
     telefono: '312-999-999',
     correo: 'freezy@gmail.com',
-    expediente:''
+    expediente:'22'
   },
   {
-    nombre: 'Harley Quinn',
+    id: 7,
+    name: 'Harley Quinn',
     direccion: 'Gotham City 1239',
     telefono: '312-999-999',
     correo: 'freezy@gmail.com',
-    expediente:''
+    expediente:'75'
   },
   {
-    nombre: 'Batman',
+    id: 8,
+    name: 'Batman',
     direccion: 'Mansion 1239',
     telefono: '312-999-999',
     correo: 'freezy@gmail.com',
-    expediente:''
+    expediente:'33'
   },
 ];

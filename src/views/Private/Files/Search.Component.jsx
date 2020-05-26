@@ -1,44 +1,21 @@
 import React, { Component } from 'react';
-
-const people = [
-    {
-        id: 1,
-        first: "Sarah",
-        last: "Johnson",
-        age: 25
-    },
-    {
-        id: 2,
-        first: "Caldwell",
-        last: "Thompson",
-        age: 32       
-    },
-    {
-        id: 3,
-        first: "Hart",
-        last: "Maynard",
-        age: 12
-    },
-    {
-        id: 4,
-        first: "Demetrius",
-        last: "McGregor",
-        age: 55
-    },
-]
+import TableFiles from './TableFiles/TableFiles'
+import { data } from './data.jsx'
 
 function searchingFor(term){
     return function(x){
-        return x.first.toLowerCase().includes(term.toLowerCase()) || !term;
+        return x.name.toLowerCase().includes(term.toLowerCase()) || !term;
     }
 }
+
+
 
 class SearchComponent extends Component{
     constructor(props){
         super(props);
 
         this.state = {
-            people: people,
+            people: data,
             term: '',
         }
 
@@ -50,7 +27,7 @@ class SearchComponent extends Component{
     }
 
     render(){
-        const {term, peope} = this.state
+        const { term, people } = this.state
         return (
             <div className = "App">
                 <form>
@@ -60,15 +37,7 @@ class SearchComponent extends Component{
                     />
                 </form>
                 {
-                people.filter(searchingFor(term)).map(function(person) {
-                    return (
-                        <div key = {person.id}>
-                            <h1> {person.first} </h1>
-                            <h1> {person.last} </h1>
-                            <h3> {person.age} </h3>
-                        </div>
-                    )
-                })
+                <TableFiles data={people.filter(searchingFor(term))} />
             }
             </div>
         )
@@ -76,5 +45,3 @@ class SearchComponent extends Component{
 }
 
 export default SearchComponent;
-
-
