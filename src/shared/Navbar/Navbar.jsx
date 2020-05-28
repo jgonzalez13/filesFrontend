@@ -21,12 +21,12 @@ const Navbar = ({auth}) => {
     );
 
   return ( 
-    <nav class="navbar is-transparent">
-      <div class="navbar-menu">
-        {itemList.map(item => (
-          <Link class="navbar-item" onClick={() => history.push(item.location)}>
+    <nav className="navbar is-transparent">
+      <div className="navbar-menu">
+        {itemList.map((item, i) => (
+          <span key={i} className="navbar-item" onClick={() => history.push(item.location)}>
             {item.itemName}
-          </Link>
+          </span>
         ))}
       </div>
     </nav>

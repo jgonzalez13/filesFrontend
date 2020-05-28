@@ -1,41 +1,40 @@
 import * as yup from 'yup'
-import PropTypes from 'prop-types'
 import React from 'react'
 import { ErrorMessage, Formik, Form as FormikForm, Field } from 'formik'
 import './LoginBox.css';
 import LoginGoogle from '../LoginGoogle/LoginGoogle';
+import FormField from '../../../../../shared/Forms/FormField'
 import avatar from './IMG/IMG2.png'
 
 const validations = yup.object().shape({
-  user: yup.string().email().required(),
+  email: yup.string().email().required(),
   password: yup.string().min(8).required()
 })
 
-const LoginBox= ({ handleSubmit, initialValues }) => (
-  // <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={validations}>
-    <form className="login-box">
-      <img className="avatarP" src={avatar} alt="avatarP"></img>
-      <h1>Login Here</h1>
-      <LoginGoogle/>
-      <h2 className="separator"><span>ó</span></h2>
-      <label for="email">Email</label>
-      <div>
-        <input className="inputsLine" name="user" placeholder="Enter Email" type="text" />
-        {/* <ErrorMessage className="Form-Error" component="span" name="user"/> */}
-      </div>
-      <label for="email">Password</label>
-      <div>
-        <input className="inputsLine" name="password" placeholder="Enter Password" type="password" />
-        {/* <ErrorMessage className="Form-Error" component="span" name="password"/> */}
-      </div>
-      <input className="buttonP" type="submit" value="Log In"></input>   
-    </form>
-  // </Formik>
-);
+const LoginBox= ({  }) => {
+  const initialValues = { email: '', password: ''}
 
-LoginBox.propTypes = {
-  handleSubmit: PropTypes.func.isRequired,
-  initialValues: PropTypes.object.isRequired
-}
+  const onLoggin = (values) => {
+    console.log(values)
+  } 
+
+  return (
+  <Formik initialValues={initialValues} onSubmit={onLoggin} validationSchema={validations}>
+    {({ handleSubmit }) => (
+      <form className="login-box" onSubmit={handleSubmit}>
+        <img className="avatarP" src={avatar} alt="avatarP"></img>
+        <h1>Login Here</h1>
+        {/* <LoginGoogle/> */}
+        <h2 className="separator"><span>ó</span></h2>
+          <FormField name="email" type="text" placeholder="Enter Email" />
+          
+          <FormField name="password" type="password" placeholder="Enter Password" />
+
+        <button className="buttonP" type="submit">Log In</button>   
+      </form>
+    )}
+  </Formik>
+  )
+};
 
 export default LoginBox;
