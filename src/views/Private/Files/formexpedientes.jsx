@@ -28,11 +28,11 @@ const FormExpedientes= ({  }) => {
         <form className="f" onSubmit={handleSubmit}> 
           <FormField name="nexp"        type="number" min="0"    max="1000"  />
           <FormField name="año"         type="number" min="1850" max="2099"  />
-          <FormField name="juzgado"     type="text"   placeholder="Enter " />
-          <FormField name="contraparte" type="text"   placeholder="Enter " />
-          <FormField name="estatus"     type="text"   placeholder="Enter " />
-          <FormField name="materia"     type="text"   placeholder="Enter " />
-          <FormField name="agenda"      type="text"   placeholder="Enter " />
+          <FormField name="juzgado"     type="text"   placeholder="Agregar Juzgado" />
+          <FormField name="contraparte" type="text"   placeholder="Agregar Contraparte " />
+          <FormField name="estatus"     type="text"   placeholder="Agregar Estatus " />
+          <FormField name="materia"     type="text"   placeholder="Agregar Materia " />
+          <FormField name="agenda"      type="text"   placeholder="Agregar Agenda" />
           <div className="container">
             <button className="btn btn1" type="submit">ADD PROCEEDINGS</button>
           </div>   
