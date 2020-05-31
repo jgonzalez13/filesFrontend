@@ -1,11 +1,12 @@
 
-.y{
+.ContainerInit{ 
   width: 400px;
   margin: auto;
 }
 
 .container{
   text-align: center;
+
   padding:10px 50px 0 50px;
 }    
 .btn{
