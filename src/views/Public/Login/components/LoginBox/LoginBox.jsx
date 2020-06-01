@@ -1,9 +1,10 @@
 import * as yup from 'yup'
-import React from 'react'
-import { ErrorMessage, Formik, Form as FormikForm, Field } from 'formik'
+import React, { useContext } from 'react'
+import { Formik } from 'formik'
 import './LoginBox.css';
 import LoginGoogle from '../LoginGoogle/LoginGoogle';
 import FormField from '../../../../../shared/Forms/FormField'
+import { UserStore } from '../../../../../containers/context/User.context'
 import avatar from './IMG/IMG2.png'
 
 const validations = yup.object().shape({
@@ -12,10 +13,12 @@ const validations = yup.object().shape({
 })
 
 const LoginBox= ({  }) => {
+  const { setUser } = useContext(UserStore);
+
   const initialValues = { email: '', password: ''}
 
   const onLoggin = (values) => {
-    console.log(values)
+    setUser({ type: 'updateUser', payload: { auth: true }})
   } 
 
   return (

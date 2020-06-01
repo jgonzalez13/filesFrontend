@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { render } from 'react-dom';
 import Modal from 'react-modal';
 
 function ModalP() {
@@ -18,5 +17,5 @@ function ModalP() {
   </div>
   );
 };
-render (<Modal/>, document.getElementById('root'));
+
 export default ModalP;

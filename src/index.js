@@ -1,15 +1,17 @@
 import React  from 'react';
 import ReactDOM from 'react-dom';
 import App from './routes/Routes';
+import { UserProvider } from './containers/context/User.context';
 import * as serviceWorker from './serviceWorker';
 import './styles/fonts.css';
 import './App.sass';
 
 
-ReactDOM.render(
-  
+ReactDOM.render( 
   <React.StrictMode>
-    <App />
+    <UserProvider>
+      <App />
+    </UserProvider>
   </React.StrictMode>,
  
   document.getElementById('root')

@@ -6,7 +6,7 @@ import FormField from '../../../../src/shared/Forms/FormField'
 import './FormFiles/formexpedientes.css';
 
 const validations = yup.object().shape({
-  nexp: yup.number().required(),
+  nexp: yup.number().required('Este campo es rquerido'),
   año: yup.number().required(),
   juzgado: yup.string().required(),
   contraparte: yup.string().required(),

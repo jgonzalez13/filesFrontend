@@ -1,11 +1,15 @@
-import React from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { UserStore } from '../../containers/context/User.context'
 
 const Navbar = ({auth}) => {
+  const { setUser } = useContext(UserStore);
+  let itemList = [];
 
-  var itemList = [];
-  const history = useHistory();
-  
+  function handleLogOut () {
+    setUser({ type: 'updateUser', payload: { auth: false }})
+  }
+
   auth ?
     (
       itemList = [
@@ -24,11 +28,12 @@ const Navbar = ({auth}) => {
     <nav className="navbar is-transparent">
       <div className="navbar-menu">
         {itemList.map((item, i) => (
-          <span key={i} className="navbar-item" onClick={() => history.push(item.location)}>
+          <Link key={i} className="navbar-item" to={item.location}>
             {item.itemName}
-          </span>
+          </Link>
         ))}
       </div>
+      {auth && <button onClick={handleLogOut}>Cerrar Sesión</button>}
     </nav>
   );
 }
