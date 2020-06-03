@@ -1,6 +1,8 @@
 import React from 'react';
 import SearchComponent from './Search.Component'
 import FormExpedientes from './formexpedientes'
+import FormAud from './formAudiencias';
+
 
 const Files = () => {
   return (
@@ -8,6 +10,7 @@ const Files = () => {
       <h1>FilesView</h1>
       <SearchComponent  />
       <FormExpedientes />
+      <FormAud />
     </div>
   );
 };
