@@ -8,6 +8,7 @@ import B1 from '../../../../../assets/img/google.png';
 import B2 from '../../../../../assets/img/facebook.png';
 import Seccion from '../Seccion/Seccion'
 
+
 const Banner = () => (
     <header className="banner">
       <div className= "seccion1">      
@@ -62,6 +63,7 @@ const Banner = () => (
           
           <button type="submit" class="botton0"><b>Iniciar Sesión</b></button>      
           <div className="buttons-container">
+
           <button type="submit" class="botton1"><img class="img" src={B1}/>con <b>Google</b></button>
           <button type="submit" class="botton2"><img class="img" src={B2}/>con <b>Facebook</b></button>
           </div>       

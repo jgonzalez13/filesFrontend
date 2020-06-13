@@ -22,21 +22,23 @@ const LoginBox= ({  }) => {
   } 
 
   return (
-  <Formik initialValues={initialValues} onSubmit={onLoggin} validationSchema={validations}>
-    {({ handleSubmit }) => (
-      <form className="login-box" onSubmit={handleSubmit}>
-        <img className="avatarP" src={avatar} alt="avatarP"></img>
-        <h1>Login Here</h1>
-        {/* <LoginGoogle/> */}
-        <h2 className="separator"><span>ó</span></h2>
-          <FormField name="email" type="text" placeholder="Enter Email" />
-          
-          <FormField name="password" type="password" placeholder="Enter Password" />
+    <div  className="login-box">
+      <img className="avatarP" src={avatar} alt="avatarP"></img>
+      <h1>Login Here</h1>
+      <LoginGoogle/> 
+      <Formik initialValues={initialValues} onSubmit={onLoggin} validationSchema={validations}>
+        {({ handleSubmit }) => (
+          <form onSubmit={handleSubmit}>
+            <h2 className="separator"><span>ó</span></h2>
+              <FormField name="email" type="text" placeholder="Enter Email" />
+              
+              <FormField name="password" type="password" placeholder="Enter Password" />
 
-        <button className="buttonP" type="submit">Log In</button>   
-      </form>
-    )}
-  </Formik>
+            <button className="buttonP" type="submit">Log In</button>   
+          </form>
+        )}
+      </Formik>
+  </div>
   )
 };
 
