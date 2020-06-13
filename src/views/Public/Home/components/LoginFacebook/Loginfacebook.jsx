@@ -6,9 +6,9 @@ import firebaseConfig from '../../../../../firebase';
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const firebaseAppAuth = firebaseApp.auth();
-const providers = { googleProvider: new firebase.auth.GoogleAuthProvider() };
+const providers = { facebookProvider: new firebase.auth.FacebookAuthProvider() };
 
-const LoginGoogle = ({ user, signInWithGoogle, signOut }) => (
+const LoginFacebook = ({ user, signInWithFacebook, signOut }) => (
   <div>
     {user ? (
       <>
@@ -16,10 +16,10 @@ const LoginGoogle = ({ user, signInWithGoogle, signOut }) => (
       </>
     ) : (
       <>
-        <button  className="buttonG" onClick={signInWithGoogle}>Sign in with Google</button>
+        <button  className="buttonG" onClick={signInWithFacebook}>Sign in with Google</button>
       </>
     )}
   </div>
 );
 
-export default withFirebaseAuth({ providers, firebaseAppAuth })(LoginGoogle);
+export default withFirebaseAuth({ providers, firebaseAppAuth })(LoginFacebook);
